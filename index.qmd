@@ -1,0 +1,19 @@
+---
+title: "Quarto fail"
+format: html
+editor: visual
+---
+
+## Quarto - fail
+
+```{r}
+f <- function() g()
+g <- function() h()
+h <- function() i()
+i <- function() stop("Error")
+```
+
+
+```{r}
+f()
+```
