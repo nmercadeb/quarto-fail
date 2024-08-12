@@ -6,6 +6,10 @@ editor: visual
 
 ## Quarto - fail
 
+```{r setup}
+rlang::global_entrace()
+```
+
 ```{r}
 f <- function() g()
 g <- function() h()
