@@ -8,9 +8,11 @@ editor: visual
 
 ```{r setup}
 rlang::global_entrace()
+options(rlang_backtrace_on_error = "full")
 ```
 
 ```{r}
+cat("LOG --- Load functions\n", file = stderr()) 
 f <- function() g()
 g <- function() h()
 h <- function() i()
@@ -19,5 +21,6 @@ i <- function() stop("Error")
 
 
 ```{r}
+cat("LOG --- Use f() function\n", file = stderr()) 
 f()
 ```
